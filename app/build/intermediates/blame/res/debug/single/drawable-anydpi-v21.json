@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility.xml",
+        "source": "/home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/res/drawable-anydpi-v21/design_ic_visibility.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/design_ic_visibility_off.xml",
+        "source": "/home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/res/drawable-anydpi-v21/design_ic_visibility_off.xml"
+    }
+]

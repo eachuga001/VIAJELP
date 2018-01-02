@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_out.xml",
+        "source": "/home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/res/anim-v21/design_bottom_sheet_slide_out.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/anim-v21/design_bottom_sheet_slide_in.xml",
+        "source": "/home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/res/anim-v21/design_bottom_sheet_slide_in.xml"
+    }
+]

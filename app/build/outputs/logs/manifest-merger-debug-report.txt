@@ -1,0 +1,129 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:2:1-35:12
+	package
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:3:5-34
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.GET_ACCOUNTS
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:6:5-71
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:6:22-68
+uses-permission#android.permission.READ_PROFILE
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:7:5-71
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:7:22-68
+uses-permission#android.permission.READ_CONTACTS
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:8:5-72
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:8:22-69
+application
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:10:5-33:19
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/096f50237cfd862dd0b087050075a0c8ac4155a7/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/2125f10b4a07a53186f578a650fb909ac6923287/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/edwin/.android/build-cache/9bb1f5c516fe2f1c66d95c2756f6563a0fcdc0db/output/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/edwin/.android/build-cache/4e163cba4519c8f6aef7056562c616490bca5514/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/edwin/.android/build-cache/323290dc07cb554e2b3e976dd0fb1ca623a363c3/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/edwin/.android/build-cache/b82e8caaf1e1288a436c5e165622eaa11952d977/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/edwin/.android/build-cache/19fedcca28605adc04dfb86828c413b5987f9e2a/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/edwin/.android/build-cache/1c0b0017d6fb00fe98657e6186bb4b6d8d6868ee/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/edwin/.android/build-cache/db710e47e63f1b97bbc3a43d1b213bb8cbdc2ff8/output/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/edwin/.android/build-cache/07748fbd448715efa55102d13483f85eef709e8f/output/AndroidManifest.xml:9:5-20
+	android:label
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:13:9-41
+	android:supportsRtl
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:15:9-35
+	android:roundIcon
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:14:9-54
+	android:allowBackup
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:11:9-35
+	android:icon
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:12:9-43
+	android:theme
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:16:9-40
+activity#eus.ehu.tta.viajelp.LoginActivity
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:17:9-25:20
+	android:label
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:19:13-45
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:18:13-42
+intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:20:13-24:29
+action#android.intent.action.MAIN
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:21:17-69
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:21:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:23:17-77
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:23:27-74
+activity#eus.ehu.tta.viajelp.MainActivity
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:26:9-29:59
+	android:label
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:28:13-56
+	android:theme
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:29:13-56
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:27:13-41
+activity#eus.ehu.tta.viajelp.SituationsActivity
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:30:9-56
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:30:19-53
+activity#eus.ehu.tta.viajelp.AprendemeActivity
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:31:9-55
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:31:19-52
+activity#eus.ehu.tta.viajelp.ForoActivity
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:32:9-59
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:32:19-47
+uses-sdk
+INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/096f50237cfd862dd0b087050075a0c8ac4155a7/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/2125f10b4a07a53186f578a650fb909ac6923287/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/edwin/.android/build-cache/9da99e2dd44d23d515e2176becae2eecaf0bb327/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/edwin/.android/build-cache/9bb1f5c516fe2f1c66d95c2756f6563a0fcdc0db/output/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/edwin/.android/build-cache/4e163cba4519c8f6aef7056562c616490bca5514/output/AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/edwin/.android/build-cache/323290dc07cb554e2b3e976dd0fb1ca623a363c3/output/AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/edwin/.android/build-cache/b82e8caaf1e1288a436c5e165622eaa11952d977/output/AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/edwin/.android/build-cache/19fedcca28605adc04dfb86828c413b5987f9e2a/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/edwin/.android/build-cache/1c0b0017d6fb00fe98657e6186bb4b6d8d6868ee/output/AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/edwin/.android/build-cache/db710e47e63f1b97bbc3a43d1b213bb8cbdc2ff8/output/AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /home/edwin/.android/build-cache/07748fbd448715efa55102d13483f85eef709e8f/output/AndroidManifest.xml:5:5-7:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/096f50237cfd862dd0b087050075a0c8ac4155a7/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/2125f10b4a07a53186f578a650fb909ac6923287/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/edwin/.android/build-cache/9da99e2dd44d23d515e2176becae2eecaf0bb327/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/edwin/.android/build-cache/9bb1f5c516fe2f1c66d95c2756f6563a0fcdc0db/output/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:support-v4:26.0.0-alpha1] /home/edwin/.android/build-cache/4e163cba4519c8f6aef7056562c616490bca5514/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-media-compat:26.0.0-alpha1] /home/edwin/.android/build-cache/323290dc07cb554e2b3e976dd0fb1ca623a363c3/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-fragment:26.0.0-alpha1] /home/edwin/.android/build-cache/b82e8caaf1e1288a436c5e165622eaa11952d977/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-ui:26.0.0-alpha1] /home/edwin/.android/build-cache/19fedcca28605adc04dfb86828c413b5987f9e2a/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-core-utils:26.0.0-alpha1] /home/edwin/.android/build-cache/1c0b0017d6fb00fe98657e6186bb4b6d8d6868ee/output/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:support-compat:26.0.0-alpha1] /home/edwin/.android/build-cache/db710e47e63f1b97bbc3a43d1b213bb8cbdc2ff8/output/AndroidManifest.xml:25:5-27:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:26:9-47

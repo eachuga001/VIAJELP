@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

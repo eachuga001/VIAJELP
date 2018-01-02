@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_dark.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/color-v11/abc_background_cache_hint_selector_material_dark.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/color-v11/abc_background_cache_hint_selector_material_light.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/color-v11/abc_background_cache_hint_selector_material_light.xml"
+    }
+]
