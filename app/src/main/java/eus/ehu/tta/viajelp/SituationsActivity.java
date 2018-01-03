@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import eus.ehu.tta.viajelp.presentation.SelectorAdapterSituation;
+import eus.ehu.tta.viajelp.presentation.AdapterSituationsGridView;
 
 public class SituationsActivity extends AppCompatActivity {
 
@@ -19,12 +19,13 @@ public class SituationsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_situations);
 
         gridView = (GridView) findViewById(R.id.gridViewSituations);
-        gridView.setAdapter(new SelectorAdapterSituation(this));
+        gridView.setAdapter(new AdapterSituationsGridView(this));
 
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //Intent intent = new Intent(SituationsActivity.this,)
+                Intent intent = new Intent(SituationsActivity.this,SituationActivity.class);
+                startActivity(intent);
             }
         });
     }

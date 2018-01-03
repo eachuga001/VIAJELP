@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:2:1-35:12
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:2:1-42:12
 	package
 		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:3:5-34
 		INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml
@@ -26,7 +26,7 @@ ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:8:22-69
 application
-ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:10:5-33:19
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:10:5-40:19
 MERGED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] /home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/AndroidManifest.xml:29:5-20
 MERGED from [com.android.support:animated-vector-drawable:26.0.0-alpha1] /home/edwin/.android/build-cache/096f50237cfd862dd0b087050075a0c8ac4155a7/output/AndroidManifest.xml:26:5-20
@@ -76,17 +76,27 @@ ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifes
 	android:name
 		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:27:13-41
 activity#eus.ehu.tta.viajelp.SituationsActivity
-ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:30:9-56
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:30:9-32:50
+	android:label
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:32:13-48
 	android:name
-		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:30:19-53
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:31:13-47
 activity#eus.ehu.tta.viajelp.AprendemeActivity
-ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:31:9-55
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:33:9-35:48
+	android:label
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:35:13-46
 	android:name
-		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:31:19-52
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:34:13-46
 activity#eus.ehu.tta.viajelp.ForoActivity
-ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:32:9-59
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:36:9-38:43
+	android:label
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:38:13-41
 	android:name
-		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:32:19-47
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:37:13-41
+activity#eus.ehu.tta.viajelp.SituationActivity
+ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:39:9-64
+	android:name
+		ADDED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml:39:19-52
 uses-sdk
 INJECTED from /home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:design:26.0.0-alpha1] /home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/AndroidManifest.xml:21:5-23:62

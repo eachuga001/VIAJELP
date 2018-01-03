@@ -27,9 +27,16 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SituationsActivity" />
-        <activity android:name=".AprendemeActivity" />
-        <activity android:name=".ForoActivity"></activity>
+        <activity
+            android:name=".SituationsActivity"
+            android:label="@string/situaciones"/>
+        <activity
+            android:name=".AprendemeActivity"
+            android:label="@string/aprendeme"/>
+        <activity
+            android:name=".ForoActivity"
+            android:label="@string/foro"/>
+        <activity android:name=".SituationActivity"></activity>
     </application>
 
 </manifest>

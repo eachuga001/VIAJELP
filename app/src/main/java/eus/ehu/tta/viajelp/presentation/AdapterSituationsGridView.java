@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Vector;
@@ -17,11 +18,11 @@ import eus.ehu.tta.viajelp.R;
  * Created by edwin on 2/01/18.
  */
 
-public class SelectorAdapterSituation extends BaseAdapter {
+public class AdapterSituationsGridView extends BaseAdapter {
     LayoutInflater layoutInflater;
     public static Vector<String> situationVector;
 
-    public SelectorAdapterSituation(Activity a ){
+    public AdapterSituationsGridView(Activity a ){
         layoutInflater = (LayoutInflater)a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         initVectorSituation(a);
     }
@@ -57,7 +58,12 @@ public class SelectorAdapterSituation extends BaseAdapter {
         ivSituacion = view.findViewById(R.id.imagenSituacion);
 
         tvNombreSituacion.setText(nombreSituacion);
+        //loadPicture(ivSituacion,position);
 
+        return view;
+    }
+
+    public void loadPicture(ImageView ivSituacion,int position){
         switch (position){
             case 0:
                 ivSituacion.setImageResource(R.drawable.aeropuerto);
@@ -84,9 +90,6 @@ public class SelectorAdapterSituation extends BaseAdapter {
                 ivSituacion.setImageResource(R.drawable.estudios);
                 break;
         }
-
-
-        return view;
     }
 
     public static void initVectorSituation(Activity a){

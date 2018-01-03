@@ -37,9 +37,16 @@
             android:name="eus.ehu.tta.viajelp.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="eus.ehu.tta.viajelp.SituationsActivity" />
-        <activity android:name="eus.ehu.tta.viajelp.AprendemeActivity" />
-        <activity android:name="eus.ehu.tta.viajelp.ForoActivity" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.SituationsActivity"
+            android:label="@string/situaciones" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.AprendemeActivity"
+            android:label="@string/aprendeme" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.ForoActivity"
+            android:label="@string/foro" />
+        <activity android:name="eus.ehu.tta.viajelp.SituationActivity" />
     </application>
 
 </manifest>
