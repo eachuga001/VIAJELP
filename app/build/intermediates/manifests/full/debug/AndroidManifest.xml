@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -47,6 +48,12 @@
             android:name="eus.ehu.tta.viajelp.ForoActivity"
             android:label="@string/foro" />
         <activity android:name="eus.ehu.tta.viajelp.SituationActivity" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.AgregarPalabrasActivity"
+            android:label="@string/agregarPalabra" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.PalabrasActivity"
+            android:label="@string/palabras" />
     </application>
 
 </manifest>

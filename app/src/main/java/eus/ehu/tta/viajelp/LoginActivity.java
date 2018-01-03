@@ -33,6 +33,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import eus.ehu.tta.viajelp.model.Business;
+
 import static android.Manifest.permission.READ_CONTACTS;
 
 /**
@@ -198,7 +200,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length() > 3;
     }
 
     /**
@@ -312,6 +314,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             try {
                 // Simulate network access.
                 Thread.sleep(1000);
+                Business business = new Business();
+        //************************************************************************************
+       //En la logica de negocio se realiza la conexion y se llama al servicio rest del Login
+       //************************************************************************************
+                if(business.loginPost(mEmail,mPassword)==null)
+                    return false;
+
+
             } catch (InterruptedException e) {
                 return false;
             }

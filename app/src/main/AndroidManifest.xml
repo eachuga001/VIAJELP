@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -29,14 +30,21 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".SituationsActivity"
-            android:label="@string/situaciones"/>
+            android:label="@string/situaciones" />
         <activity
             android:name=".AprendemeActivity"
-            android:label="@string/aprendeme"/>
+            android:label="@string/aprendeme" />
         <activity
             android:name=".ForoActivity"
-            android:label="@string/foro"/>
-        <activity android:name=".SituationActivity"></activity>
+            android:label="@string/foro" />
+        <activity android:name=".SituationActivity" />
+        <activity
+            android:name=".AgregarPalabrasActivity"
+            android:label="@string/agregarPalabra"/>
+        <activity
+            android:name=".PalabrasActivity"
+            android:label="@string/palabras"
+            ></activity>
     </application>
 
 </manifest>
