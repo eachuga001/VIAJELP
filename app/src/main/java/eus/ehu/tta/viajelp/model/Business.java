@@ -23,6 +23,7 @@ public class Business {
     List<Frase> listaFrases;
 
     public Business (){
+        //getFrasesSituaciones();
         crearLista();
         restClient = new RestClient();
         jsonTools = new JSONTools();
@@ -46,6 +47,21 @@ public class Business {
         listaFrases.add(fraseB);
     }
 
+    public void getFrasesSituaciones(){
+        if(listaFrases == null)
+            listaFrases = new ArrayList<>();
+        JSONObject jsonObject = new JSONObject();
+        try {
+            jsonObject.put("tipo","S");
+            String frasesServidor = restClient.postJsonConnection(jsonObject,restClient.LISTA_FRASES_URL);
+            listaFrases = jsonTools.getFrasesFromJson(frasesServidor);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public List<Frase> getListaFrases() {
         return listaFrases;
     }
@@ -63,7 +79,10 @@ public class Business {
             json.put("usuario",usuario);
             json.put("password",password);
 
-            Usuario user = jsonTools.getUsuarioFromJson(restClient.postJsonConnection(json,restClient.LOGIN_URL));
+            Usuario user = null;
+            String responseFromServer = restClient.postJsonConnection(json,restClient.LOGIN_URL);
+            if(responseFromServer!=null)
+                user = jsonTools.getUsuarioFromJson(responseFromServer);
 
             return user;
         } catch (JSONException e) {

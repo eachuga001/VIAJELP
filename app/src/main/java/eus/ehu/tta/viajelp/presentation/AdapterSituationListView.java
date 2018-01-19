@@ -26,9 +26,9 @@ public class AdapterSituationListView extends BaseAdapter{
 
     public static List<Frase> listaFrases;
 
-    public AdapterSituationListView(Activity a){
+    public AdapterSituationListView(Activity a,List<Frase> listaFrases){
         layoutInflater = (LayoutInflater)a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        listaFrases = new Business().getListaFrases();//Esto hay que cambiar
+        this.listaFrases = listaFrases;//Esto hay que cambiar
     }
 
     @Override

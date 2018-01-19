@@ -71,8 +71,8 @@ public class JSONTools {
                 frase.setAudio(json.getString("audio"));
                 frase.setSituacion(json.getString("situacion"));
                 frase.setTipo(json.getString("tipo"));
-                frase.setUsuarioAns(json.getInt("usuAns"));
-                frase.setUsuarioAsk(json.getInt("usuAsk"));
+                frase.setUsuarioAns(json.getInt("usuarioAns"));
+                frase.setUsuarioAsk(json.getInt("usuarioAsk"));
                 frase.setAnsUser(json.getString("ansUser"));
                 frase.setAskUser(json.getString("askUser"));
 
@@ -85,6 +85,16 @@ public class JSONTools {
 
 
         return lista;
+    }
+
+    public List<Frase> getFrasesBySituacion(String situacion, List<Frase> lista){
+        List<Frase> listaSituacion = new ArrayList<>();
+        for (Frase frase : lista){
+            if(frase.getSituacion().equals(situacion))
+                listaSituacion.add(frase);
+        }
+
+        return listaSituacion;
     }
 
     public String getJsonFromFrase(Frase frase){

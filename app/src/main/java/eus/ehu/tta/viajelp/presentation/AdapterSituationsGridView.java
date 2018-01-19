@@ -21,9 +21,11 @@ import eus.ehu.tta.viajelp.R;
 public class AdapterSituationsGridView extends BaseAdapter {
     LayoutInflater layoutInflater;
     public static Vector<String> situationVector;
+    private String listaFrasesJson;
 
     public AdapterSituationsGridView(Activity a ){
         layoutInflater = (LayoutInflater)a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        //listaFrasesJson = lista;
         initVectorSituation(a);
     }
 

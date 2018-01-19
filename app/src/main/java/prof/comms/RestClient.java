@@ -45,10 +45,11 @@ public class RestClient {
         writer.close();
 
         BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-        System.out.println(br.readLine());
 
-        return conn.getResponseMessage();
+        //if(br.readLine()!=null)
+            System.out.println(conn.getResponseMessage());
 
+        return br.readLine();
     }
 
 }

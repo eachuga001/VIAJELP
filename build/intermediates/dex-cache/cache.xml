@@ -25,7 +25,7 @@
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
-        sha1="6ff66cf9eb4830d3ea011f24d4f74dcb639f4e9d">
+        sha1="806f611f8d6ce6355db37d02a63d6aa9c464a66b">
         <dex dex="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_08726f9d6eef67f041e30faf9816fdfa13880625/classes.dex" />
     </item>
     <item
@@ -57,21 +57,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/edwin/.android/build-cache/9bb1f5c516fe2f1c66d95c2756f6563a0fcdc0db/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="26.0.2"
-        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
-        <dex dex="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9d4605748d82bb0b6792d5ca6fa997085fe7fd2b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="26.0.2"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
         <dex dex="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_041524ab14a3d473a240cf36bd48d0b471bba84c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/edwin/.android/build-cache/9bb1f5c516fe2f1c66d95c2756f6563a0fcdc0db/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="26.0.2"
+        sha1="cddcd0fb93bc70e27325f2f715b2710332004ebb">
+        <dex dex="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9d4605748d82bb0b6792d5ca6fa997085fe7fd2b/classes.dex" />
     </item>
 
 </items>

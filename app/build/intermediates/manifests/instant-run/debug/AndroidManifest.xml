@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <meta-data
         android:name="android.support.VERSION"
@@ -37,9 +38,22 @@
             android:name="eus.ehu.tta.viajelp.MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="eus.ehu.tta.viajelp.SituationsActivity" />
-        <activity android:name="eus.ehu.tta.viajelp.AprendemeActivity" />
-        <activity android:name="eus.ehu.tta.viajelp.ForoActivity" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.SituationsActivity"
+            android:label="@string/situaciones" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.AprendemeActivity"
+            android:label="@string/aprendeme" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.ForoActivity"
+            android:label="@string/foro" />
+        <activity android:name="eus.ehu.tta.viajelp.SituationActivity" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.AgregarPalabrasActivity"
+            android:label="@string/agregarPalabra" />
+        <activity
+            android:name="eus.ehu.tta.viajelp.PalabrasActivity"
+            android:label="@string/palabras" />
 
         <provider
             android:name="com.android.tools.fd.runtime.InstantRunContentProvider"
