@@ -39,11 +39,14 @@
     <string name="transporte">TRANSPORTE PUBLICO</string>
     <string name="estudios">ESTUDIOS</string>
     <string name="agregarPalabra">Agregar Palabra</string>
+    <string name="escribePalabra">Escribe una palabra</string>
+    <string name="guardarPalabra">Guardar Palabra</string>
     <string name="palabras">PALABRAS</string>
     <string name="palabra">Palabra</string>
     <string name="traduccion">Traduccion</string>
     <string name="nuevaFrase">Nueva Frase</string>
     <string name="verLista">Ver lista</string>
+    <string name="play">Play</string>
 
 
 </resources>

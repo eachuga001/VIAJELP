@@ -20,12 +20,12 @@
         "source": "/home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/res/layout/activity_situations.xml"
     },
     {
-        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
-        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout/abc_list_menu_item_icon.xml"
-    },
-    {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/design_navigation_item_header.xml",
         "source": "/home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/res/layout/design_navigation_item_header.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_icon.xml",
+        "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout/abc_list_menu_item_icon.xml"
     },
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/design_navigation_item.xml",
@@ -46,6 +46,10 @@
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_dialog_title_material.xml",
         "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout/abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/activity_foro_item.xml",
+        "source": "/home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/res/layout/activity_foro_item.xml"
     },
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_list_menu_item_checkbox.xml",
@@ -226,6 +230,10 @@
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/design_navigation_item_separator.xml",
         "source": "/home/edwin/.android/build-cache/d01aad39c22eb4c93fc3704f484854492495fb96/output/res/layout/design_navigation_item_separator.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/activity_palabra_item.xml",
+        "source": "/home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/res/layout/activity_palabra_item.xml"
     },
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",

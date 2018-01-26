@@ -34,6 +34,50 @@ public class JSONTools {
         return null;
     }
 
+    //*********************************************************
+    //****************OPERACIONES CON PALABRAS*****************
+    //*********************************************************
+    public List<Palabra> getPalabrasFromJson(String jsonArray){
+        List<Palabra> listaPalabras = new ArrayList<>();
+        try {
+            JSONArray array = new JSONArray(jsonArray);
+            for(int i=0;i<array.length();i++){
+                JSONObject json = array.getJSONObject(i);
+                Palabra palabra = new Palabra();
+
+                palabra.setIdPalabra(json.getInt("idPalabra"));
+                palabra.setIdUsuario(json.getInt("idUsuario"));
+                palabra.setPalabraEng(json.getString("palabraEng"));
+                palabra.setPalabraEsp(json.getString("palabraEsp"));
+
+                listaPalabras.add(palabra);
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return listaPalabras;
+    }
+
+    public JSONObject getPalabraJSON(String palabra,String traduccion, int idUsuario){
+        JSONObject jsonObject = new JSONObject();
+
+        try {
+            jsonObject.put("palabraEng",traduccion);
+            jsonObject.put("palabraEsp",palabra);
+            jsonObject.put("idUsuario",idUsuario);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return jsonObject;
+    }
+
+    //*********************************************************
+    //****************OPERACIONES CON FRASES*******************
+    //*********************************************************
+
     public Frase getFrase(String stringJson){
         Frase frase = new Frase();
         try {
@@ -55,6 +99,7 @@ public class JSONTools {
         }
         return frase;
     }
+
 
 
     public List<Frase> getFrasesFromJson(String arrayJson){

@@ -8,15 +8,24 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+
+import org.json.JSONObject;
+
+import prof.comms.ProgressTask;
+import prof.comms.RestClient;
 
 public class MainActivity extends AppCompatActivity {
 
     Button btnSituaciones,btnAprendeme,btnForo;
+    RestClient restClient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        restClient = new RestClient();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -32,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         btnSituaciones = (Button)findViewById(R.id.btnSituaciones);
         btnAprendeme = (Button)findViewById(R.id.btnAprendeme);
         btnForo = (Button)findViewById(R.id.btnForo);
+        TextView tvLogin = (TextView)findViewById(R.id.tvSaludoLogin);
+        tvLogin.setText(getIntent().getStringExtra("login"));
 
     }
 
@@ -41,13 +52,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clickAprendeme(View view){
+        int idUsuario = getIntent().getIntExtra("idUsuario",0);
         Intent intent =  new Intent(this,AprendemeActivity.class);
+        intent.putExtra("idUsuario",idUsuario);
         startActivity(intent);
     }
 
     public void clickForo(View view){
+        pedirFrases();
+
+    }
+
+    public void goToForoActivity(String strigFrasesForo){
         Intent intent =  new Intent(this,ForoActivity.class);
+        intent.putExtra("frasesForo",strigFrasesForo);
         startActivity(intent);
     }
+
+    public void pedirFrases(){
+        new ProgressTask<String>(this) {
+            @Override
+            protected String work() throws Exception {
+                JSONObject jsonObject = new JSONObject();
+                jsonObject.put("tipo","F");
+                return restClient.postJsonConnection(jsonObject,restClient.LISTA_FRASES_URL);
+            }
+
+            @Override
+            protected void onFinish(String result) {
+                //Se recibe el string JSON de las frases
+                goToForoActivity(result);
+            }
+        }.execute();
+    }
+
+
 
 }

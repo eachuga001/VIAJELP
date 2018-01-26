@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--ESTO ES UN ELEMENTO DE LA LISTA DE FRASES QUE SE RELLENARA CON LAS FRASES EN LOS DOS IDIOMAS -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvFraseEspForo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvFraseEngForo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnReproducir"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/play"/>
+    </LinearLayout>
+
+
+
+</LinearLayout>

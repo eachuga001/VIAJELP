@@ -52,4 +52,23 @@ public class RestClient {
         return br.readLine();
     }
 
+    public String postJsonConnectionUp(final JSONObject json, String path) throws IOException {
+        HttpURLConnection conn = null;
+
+        conn = getConnection(path);
+        conn.setDoOutput(true);
+        conn.setRequestMethod("POST");
+        conn.setRequestProperty("Content-Type", "application/json");
+        Writer writer = new BufferedWriter(new OutputStreamWriter(conn.getOutputStream()));
+        writer.write(json.toString());
+        writer.close();
+
+        //BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+        //if(br.readLine()!=null)
+        System.out.println(conn.getResponseMessage());
+
+        return conn.getResponseMessage();
+    }
+
 }

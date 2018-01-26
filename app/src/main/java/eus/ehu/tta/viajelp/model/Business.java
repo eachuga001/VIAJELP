@@ -62,6 +62,13 @@ public class Business {
         }
     }
 
+    public String getPalabrasFromServer(){
+        String palabras = null;
+        //restClient.postJsonConnection()
+
+        return palabras;
+    }
+
     public List<Frase> getListaFrases() {
         return listaFrases;
     }

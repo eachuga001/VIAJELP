@@ -34,6 +34,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import eus.ehu.tta.viajelp.model.Business;
+import eus.ehu.tta.viajelp.model.LogicaDB;
 import eus.ehu.tta.viajelp.model.Usuario;
 
 import static android.Manifest.permission.READ_CONTACTS;
@@ -66,12 +67,14 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
     private Usuario usuario = null;
+    private LogicaDB logicaDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         // Set up the login form.
+        logicaDB = new LogicaDB(this,"VIAJELPDB",null,1);
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
@@ -321,8 +324,13 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
        //En la logica de negocio se realiza la conexion y se llama al servicio rest del Login
        //************************************************************************************
                 usuario = business.loginPost(mEmail,mPassword);
+
                 if(usuario==null)
                     return false;
+                else{
+                    logicaDB.crearTablaUsuario();
+                    logicaDB.saveUsuario(usuario);
+                }
 
             } catch (InterruptedException e) {
                 return false;
@@ -350,6 +358,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                 intent.putExtra("login",usuario.getUsuario());
                 intent.putExtra("password",usuario.getPassword());
+                intent.putExtra("idUsuario",usuario.getIdUsuario());
                 startActivity(intent);
                 finish();
             } else {
