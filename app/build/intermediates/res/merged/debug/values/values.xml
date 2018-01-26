@@ -694,6 +694,7 @@
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="comida">COMIDA</string>
+    <string name="contestaAlForo">Contesta al foro</string>
     <string name="edad">Edad</string>
     <string name="entrar">Entrar</string>
     <string name="error_field_required">This field is required</string>
@@ -703,6 +704,7 @@
     <string name="escribePalabra">Escribe una palabra</string>
     <string name="estudios">ESTUDIOS</string>
     <string name="foro">FORO</string>
+    <string name="fraseEnviada">Frase envida</string>
     <string name="guardarPalabra">Guardar Palabra</string>
     <string name="hola">Hola</string>
     <string name="hotel">HOTEL</string>
@@ -722,12 +724,15 @@
         completions."
     </string>
     <string name="play">Play</string>
+    <string name="preguntar">Preguntar</string>
+    <string name="pregutaAlForo">Escribe al foro</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password (optional)</string>
     <string name="queEmpieceElViaje">QUE EMPIECE EL VIAJE</string>
     <string name="registrate">Registrate</string>
     <string name="registro">Registro</string>
     <string name="repetirPassword">Repetir Password</string>
+    <string name="reproducir">Escuchar respuesta</string>
     <string name="salud">SALUD</string>
     <string name="search_menu_title">Search</string>
     <string name="situaciones">SITUACIONES</string>

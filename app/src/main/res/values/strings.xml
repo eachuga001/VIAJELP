@@ -29,6 +29,11 @@
     <string name="situaciones">SITUACIONES</string>
     <string name="aprendeme">APRENDEME</string>
     <string name="foro">FORO</string>
+    <string name="pregutaAlForo">Escribe al foro</string>
+    <string name="preguntar">Preguntar</string>
+    <string name="fraseEnviada">Frase envida</string>
+    <string name="contestaAlForo">Contesta al foro</string>
+    <string name="reproducir">Escuchar respuesta</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
     <string name="aeropuerto">AEROPUERTO</string>
     <string name="hotel">HOTEL</string>

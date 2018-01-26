@@ -64,8 +64,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goToForoActivity(String strigFrasesForo){
+        int idUsuario = getIntent().getIntExtra("idUsuario",0);
         Intent intent =  new Intent(this,ForoActivity.class);
         intent.putExtra("frasesForo",strigFrasesForo);
+        intent.putExtra("idUsuario",idUsuario);
         startActivity(intent);
     }
 

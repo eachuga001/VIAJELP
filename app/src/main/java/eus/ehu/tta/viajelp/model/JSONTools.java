@@ -142,6 +142,17 @@ public class JSONTools {
         return listaSituacion;
     }
 
+    public Frase buildFraseAsk(String fraseAsk, int idUser){
+        Frase frase = new Frase();
+
+        frase.setFraseEsp(fraseAsk);
+        frase.setTipo("F");
+        frase.setUsuarioAsk(idUser);
+        frase.setUsuarioAns(1);
+
+        return frase;
+    }
+
     public String getJsonFromFrase(Frase frase){
         JSONObject fraseJson = new JSONObject();
 
@@ -151,9 +162,9 @@ public class JSONTools {
             fraseJson.put("fraseEng",frase.getFraseEng());
             fraseJson.put("audio",frase.getAudio());
             fraseJson.put("situacion",frase.getSituacion());
-            fraseJson.put("ftipo",frase.getTipo());
-            fraseJson.put("usuAns",frase.getUsuarioAns());
-            fraseJson.put("usuAsk",frase.getUsuarioAsk());
+            fraseJson.put("tipo",frase.getTipo());
+            fraseJson.put("usuarioAns",frase.getUsuarioAns());
+            fraseJson.put("usuarioAsk",frase.getUsuarioAsk());
             fraseJson.put("ansUser",frase.getAnsUser());
             fraseJson.put("askUser",frase.getAskUser());
 

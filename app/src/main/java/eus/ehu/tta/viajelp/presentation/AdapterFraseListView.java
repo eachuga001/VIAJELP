@@ -45,10 +45,6 @@ public class AdapterFraseListView extends BaseAdapter{
 
     }
 
-
-
-
-
     @Override
     public int getCount() {
         //return listaFrases.size();
@@ -129,9 +125,12 @@ public class AdapterFraseListView extends BaseAdapter{
 
         TextView tvFraseEsp = view.findViewById(R.id.tvFraseEspForo);
         TextView tvFraseEng = view.findViewById(R.id.tvFraseEngForo);
+        TextView tvUsuarioAsk = view.findViewById(R.id.tvUsuarioAskForo);
+        TextView tvUsuarioAns = view.findViewById(R.id.tvUsuarioAnsForo);
         Button btnAudio = view.findViewById(R.id.btnReproducir);
 
-
+        tvUsuarioAsk.setText(listaFrases.get(position).getAskUser());
+        tvUsuarioAns.setText(listaFrases.get(position).getAnsUser());
         tvFraseEsp.setText(listaFrases.get(position).getFraseEsp());
         tvFraseEng.setText(listaFrases.get(position).getFraseEng());
 

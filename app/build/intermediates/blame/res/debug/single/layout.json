@@ -208,6 +208,10 @@
         "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout/select_dialog_multichoice_material.xml"
     },
     {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/content_foro.xml",
+        "source": "/home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/res/layout/content_foro.xml"
+    },
+    {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_action_menu_layout.xml",
         "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout/abc_action_menu_layout.xml"
     },
@@ -238,6 +242,10 @@
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/abc_screen_toolbar.xml",
         "source": "/home/edwin/.android/build-cache/a06989fb5954d5ba6e5331ac247a1b960547ee73/output/res/layout/abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/dialog_pregutar_foro.xml",
+        "source": "/home/edwin/AndroidStudioProjects/VIAJELP/app/src/main/res/layout/dialog_pregutar_foro.xml"
     },
     {
         "merged": "/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/res/merged/debug/layout/notification_template_custom_big.xml",
