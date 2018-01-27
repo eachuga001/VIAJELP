@@ -1,14 +1,11 @@
-package prof.comms;
+package eus.ehu.tta.viajelp.model.comms;
 
 import android.os.AsyncTask;
-import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
-
-import eus.ehu.tta.viajelp.R;
 
 /**
  * Created by edwin on 26/01/18.

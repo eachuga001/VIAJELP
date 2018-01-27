@@ -9,10 +9,9 @@ import android.widget.GridView;
 
 import org.json.JSONObject;
 
-import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.presentation.AdapterSituationsGridView;
-import prof.comms.ProgressTask;
-import prof.comms.RestClient;
+import eus.ehu.tta.viajelp.model.comms.ProgressTask;
+import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 public class SituationsActivity extends AppCompatActivity {
 

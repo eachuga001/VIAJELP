@@ -9,8 +9,8 @@ import org.json.JSONObject;
 
 import eus.ehu.tta.viajelp.model.LogicaDB;
 import eus.ehu.tta.viajelp.model.Usuario;
-import prof.comms.ProgressTask;
-import prof.comms.RestClient;
+import eus.ehu.tta.viajelp.model.comms.ProgressTask;
+import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 public class AprendemeActivity extends AppCompatActivity {
 

@@ -1,31 +1,31 @@
-package prof.view;
+package eus.ehu.tta.viajelp.presentation.view;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.net.Uri;
 import android.support.v4.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.StringRes;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import org.json.JSONObject;
+import java.io.File;
+import java.io.IOException;
+import java.net.URI;
 
 import eus.ehu.tta.viajelp.R;
-import eus.ehu.tta.viajelp.model.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
-import prof.comms.BackgroundThread;
-import prof.comms.RestClient;
+import eus.ehu.tta.viajelp.model.comms.BackgroundThread;
+import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 /**
  * Created by edwin on 26/01/18.
  */
 
-public class DialogPlayer extends DialogFragment {
+public class DialogPlayer extends DialogFragment implements Runnable {
 
-    static int idUsuario;
+    static int idUsuario,position;
     static String frase;
     static String type;
     private EditText etNuevaFrase;
@@ -41,6 +41,7 @@ public class DialogPlayer extends DialogFragment {
 
         return dp;
     }
+
     public static DialogPlayer newInstance (int id,String tipo){
         DialogPlayer dp = new DialogPlayer();
         idUsuario = id;
@@ -60,6 +61,7 @@ public class DialogPlayer extends DialogFragment {
             case "dialogoResponder":
                 break;
             case "dialogoReproducir":
+                builder = getDialogReproducir(builder);
                 break;
         }
 
@@ -100,5 +102,34 @@ public class DialogPlayer extends DialogFragment {
         });
 
         return builder;
+    }
+
+    public AlertDialog.Builder getDialogReproducir(AlertDialog.Builder builder){
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View layout =  inflater.inflate(R.layout.dialog_reproducir_foro,null);
+
+        int position =  idUsuario;//en este caso en el constructor se pasa la posicion, pero no el idUsuairo
+
+        AudioPlayer player = new AudioPlayer(layout,this);
+        try {
+            //player.setAudioUri(Uri.parse(RestClient.URLS_SERVER+"audio/audioForo"+position+".3gp"));
+            player.setAudioUri(Uri.parse("http://158.227.55.34:28080/static/serverViajelp/audio/audioForo3.3gp"));
+            //player.setAudioUri(Uri.parse("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"));
+            //player.setAudioUri("http://158.227.55.34:28080/static/serverViajelp/audio/audioForo3.3gp");
+
+            //player.setAudioUri(Uri.parse("http://u017633.ehu.eus:28080/static/ServidorTta/AndroidManifest.mp4"));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
+
+        builder.setView(layout);
+        builder.setTitle(R.string.reproducir);
+
+        return builder;
+    }
+
+    @Override
+    public void run() {
+
     }
 }

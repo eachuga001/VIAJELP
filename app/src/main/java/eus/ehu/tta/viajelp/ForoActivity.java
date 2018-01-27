@@ -1,7 +1,6 @@
 package eus.ehu.tta.viajelp;
 
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -13,7 +12,7 @@ import java.util.List;
 import eus.ehu.tta.viajelp.model.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.presentation.AdapterFraseListView;
-import prof.view.DialogPlayer;
+import eus.ehu.tta.viajelp.presentation.view.DialogPlayer;
 
 public class ForoActivity extends AppCompatActivity {
 
@@ -32,7 +31,7 @@ public class ForoActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.lvFrasesForo);
         listaFrases = jsonTools.getFrasesFromJson(getIntent().getStringExtra("frasesForo"));
 
-        listView.setAdapter(new AdapterFraseListView(this,listaFrases,"foro"));
+        listView.setAdapter(new AdapterFraseListView(this,fragmentManager,listaFrases,"foro"));//Se pasa las frases al adaptador
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.addFraseForo);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -40,6 +39,7 @@ public class ForoActivity extends AppCompatActivity {
             public void onClick(View view) {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
+                //Para crear un dialogo se le pasa el id del usuario y el tipo de dialogo mediante un string
                 DialogPlayer dp = DialogPlayer.newInstance(getIntent().getIntExtra("idUsuario",0),"dialogoPreguntar");
                 dp.show(fragmentManager,"Tag");
             }

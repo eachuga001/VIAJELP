@@ -1,7 +1,6 @@
-package prof.comms;
+package eus.ehu.tta.viajelp.model.comms;
 
 
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.widget.Toast;

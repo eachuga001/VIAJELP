@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import prof.comms.RestClient;
+import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 /**
  * Created by edwin on 3/01/18.

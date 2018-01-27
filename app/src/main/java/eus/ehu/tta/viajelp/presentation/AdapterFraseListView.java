@@ -11,12 +11,13 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Vector;
+import android.support.v4.app.FragmentManager;
 
 import eus.ehu.tta.viajelp.R;
 import eus.ehu.tta.viajelp.model.Business;
 import eus.ehu.tta.viajelp.model.Frase;
 import eus.ehu.tta.viajelp.model.Palabra;
+import eus.ehu.tta.viajelp.presentation.view.DialogPlayer;
 
 /**
  * Created by edwin on 3/01/18.
@@ -29,10 +30,25 @@ public class AdapterFraseListView extends BaseAdapter{
     public static List<Frase> listaFrases;
     public static List<Palabra> listaPalabras;
     private String type;
+    private FragmentManager fragmentManager;
     int size;
 
 
     public AdapterFraseListView(Activity a, Object lista,String type){
+        layoutInflater = (LayoutInflater)a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        this.type = type;
+        if(type.equals("foro") || type.equals("situaciones")){
+            this.listaFrases = (ArrayList)lista;//Esto hay que cambiar
+            size = ((ArrayList) listaFrases).size();
+        }else{
+            this.listaPalabras = (ArrayList)lista;
+            size = listaPalabras.size();
+        }
+
+    }
+
+    public AdapterFraseListView(Activity a,FragmentManager fm, Object lista,String type){
+        fragmentManager = fm;
         layoutInflater = (LayoutInflater)a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.type = type;
         if(type.equals("foro") || type.equals("situaciones")){
@@ -134,6 +150,25 @@ public class AdapterFraseListView extends BaseAdapter{
         tvFraseEsp.setText(listaFrases.get(position).getFraseEsp());
         tvFraseEng.setText(listaFrases.get(position).getFraseEng());
 
+        checkAudio(position,btnAudio);
+
         return view;
+    }
+
+    public void checkAudio(final int position, Button btn){
+
+        if(listaFrases.get(position).getAudio()=="null"){
+            btn.setVisibility(View.GONE);
+        }else{
+            btn.setVisibility(View.VISIBLE);
+            btn.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    DialogPlayer dp = DialogPlayer.newInstance(position,"dialogoReproducir");
+                    dp.show(fragmentManager,"tag");
+                }
+            });
+        }
+
     }
 }

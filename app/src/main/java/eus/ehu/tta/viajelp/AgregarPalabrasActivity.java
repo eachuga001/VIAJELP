@@ -10,9 +10,8 @@ import android.widget.Toast;
 import org.json.JSONObject;
 
 import eus.ehu.tta.viajelp.model.JSONTools;
-import eus.ehu.tta.viajelp.model.Palabra;
-import prof.comms.ProgressTask;
-import prof.comms.RestClient;
+import eus.ehu.tta.viajelp.model.comms.ProgressTask;
+import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 public class AgregarPalabrasActivity extends AppCompatActivity {
 
