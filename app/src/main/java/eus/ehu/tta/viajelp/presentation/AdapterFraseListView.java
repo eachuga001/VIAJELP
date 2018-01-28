@@ -49,6 +49,7 @@ public class AdapterFraseListView extends BaseAdapter{
 
     public AdapterFraseListView(Activity a,FragmentManager fm, Object lista,String type){
         fragmentManager = fm;
+
         layoutInflater = (LayoutInflater)a.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         this.type = type;
         if(type.equals("foro") || type.equals("situaciones")){
@@ -150,7 +151,7 @@ public class AdapterFraseListView extends BaseAdapter{
         tvFraseEsp.setText(listaFrases.get(position).getFraseEsp());
         tvFraseEng.setText(listaFrases.get(position).getFraseEng());
 
-        checkAudio(position,btnAudio);
+        //checkAudio(position,btnAudio);
 
         return view;
     }

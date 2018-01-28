@@ -22,11 +22,8 @@ public class AudioPlayer implements MediaController.MediaPlayerControl, MediaPla
     private MediaPlayer player;
     private MediaController controller;
 
-    private AssetManager assets;
-    AssetFileDescriptor fd;
 
     public AudioPlayer(final View view, final Runnable onExit){
-
         this.view = view;
         player = new MediaPlayer();
         player.setOnPreparedListener(this);

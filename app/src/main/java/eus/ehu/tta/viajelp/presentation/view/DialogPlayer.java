@@ -1,20 +1,28 @@
 package eus.ehu.tta.viajelp.presentation.view;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v4.app.DialogFragment;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URI;
 
 import eus.ehu.tta.viajelp.R;
+import eus.ehu.tta.viajelp.model.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.model.comms.BackgroundThread;
 import eus.ehu.tta.viajelp.model.comms.RestClient;
@@ -26,17 +34,19 @@ import eus.ehu.tta.viajelp.model.comms.RestClient;
 public class DialogPlayer extends DialogFragment implements Runnable {
 
     static int idUsuario,position;
-    static String frase;
+    static Frase frase;
     static String type;
     private EditText etNuevaFrase;
+    private static final int AUDIO_REQUEST_CODE = 2;
+    public Uri fileUri;
 
     public DialogPlayer(){
 
     }
-    public static DialogPlayer newInstance (String string,int id,String tipo){
+    public static DialogPlayer newInstance (Frase f,int id,String tipo){
         DialogPlayer dp = new DialogPlayer();
         idUsuario = id;
-        frase = string;
+        frase = f;
         type = tipo;
 
         return dp;
@@ -53,12 +63,13 @@ public class DialogPlayer extends DialogFragment implements Runnable {
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-        etNuevaFrase = getActivity().findViewById(R.id.etPreguntaForo);
+        //etNuevaFrase = getActivity().findViewById(R.id.etPreguntaForo);
         switch (type){
             case "dialogoPreguntar":
                 builder = getDialogPreguntar(builder);
                 break;
             case "dialogoResponder":
+                builder = getDialogResponder(builder);
                 break;
             case "dialogoReproducir":
                 builder = getDialogReproducir(builder);
@@ -104,6 +115,61 @@ public class DialogPlayer extends DialogFragment implements Runnable {
         return builder;
     }
 
+    public AlertDialog.Builder getDialogResponder(AlertDialog.Builder builder){
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        View layout =  inflater.inflate(R.layout.dialog_responder_foro,null);
+        TextView tvPreguntaForo =  layout.findViewById(R.id.tvPreguntaForo);
+        etNuevaFrase = layout.findViewById(R.id.etRespuestaForo);
+        Button btnGrabarAudio = layout.findViewById(R.id.btnGrabarAudio);
+        btnGrabarAudio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_MICROPHONE))
+                    Toast.makeText(getContext(),R.string.noMicrophone,Toast.LENGTH_SHORT).show();
+                else{
+                    Intent intent = new Intent(MediaStore.Audio.Media.RECORD_SOUND_ACTION);
+                    if(intent.resolveActivity(getActivity().getPackageManager())!=null)
+                        startActivityForResult(intent, AUDIO_REQUEST_CODE);
+                    else
+                        Toast.makeText(getContext(),R.string.noApp,Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        tvPreguntaForo.setText(frase.getFraseEsp());
+        builder.setView(layout);
+        builder.setTitle(R.string.contestaAlForo).
+                setPositiveButton(R.string.contestar, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //lo que debe hacer al presionar el boton de responder
+                        JSONTools jsonTools = new JSONTools();
+                        Frase f = jsonTools.buildFraseAns(frase,etNuevaFrase.getText().toString(),idUsuario,fileUri.toString());
+                        String fraseJson = jsonTools.getJsonFromFrase(f);
+
+                        BackgroundThread hilo = new BackgroundThread(fraseJson);
+                        hilo.execute(RestClient.UP_FRASE_ANS_URL);
+
+                        getActivity().onBackPressed();
+                        dialog.cancel();
+
+                    }
+                }).setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.cancel();
+            }
+        });
+
+        return builder;
+    }
+
+    public void onActivityResult(int requestCode, int resultCode, Intent data){
+        if(resultCode != Activity.RESULT_OK)
+            return;
+        fileUri = data.getData();
+        Toast.makeText(getContext(),"Audio Guardado",Toast.LENGTH_SHORT).show();
+    }
+
     public AlertDialog.Builder getDialogReproducir(AlertDialog.Builder builder){
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View layout =  inflater.inflate(R.layout.dialog_reproducir_foro,null);
@@ -112,8 +178,8 @@ public class DialogPlayer extends DialogFragment implements Runnable {
 
         AudioPlayer player = new AudioPlayer(layout,this);
         try {
-            //player.setAudioUri(Uri.parse(RestClient.URLS_SERVER+"audio/audioForo"+position+".3gp"));
-            player.setAudioUri(Uri.parse("http://158.227.55.34:28080/static/serverViajelp/audio/audioForo3.3gp"));
+            player.setAudioUri(Uri.parse(RestClient.URLS_SERVER+"audio/audioForo"+position+".3gp"));
+            //player.setAudioUri(Uri.parse("http://158.227.55.34:28080/static/serverViajelp/audio/audioForo3.3gp"));
             //player.setAudioUri(Uri.parse("https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"));
             //player.setAudioUri("http://158.227.55.34:28080/static/serverViajelp/audio/audioForo3.3gp");
 
@@ -128,8 +194,11 @@ public class DialogPlayer extends DialogFragment implements Runnable {
         return builder;
     }
 
+
+
     @Override
     public void run() {
 
     }
+
 }

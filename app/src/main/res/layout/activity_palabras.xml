@@ -8,7 +8,7 @@
     tools:context="eus.ehu.tta.viajelp.PalabrasActivity">
 
     <EditText
-        android:id="@+id/etBuscador"
+        android:id="@+id/etBuscadorPalabras"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Buscar..."

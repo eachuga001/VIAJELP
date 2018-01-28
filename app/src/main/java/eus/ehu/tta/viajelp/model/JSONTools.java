@@ -153,6 +153,16 @@ public class JSONTools {
         return frase;
     }
 
+    public Frase buildFraseAns(Frase frase,String fraseAns,int idUser, String audio){
+
+
+        frase.setUsuarioAns(idUser);
+        frase.setFraseEng(fraseAns);
+        frase.setAudio(audio);
+
+        return frase;
+    }
+
     public String getJsonFromFrase(Frase frase){
         JSONObject fraseJson = new JSONObject();
 

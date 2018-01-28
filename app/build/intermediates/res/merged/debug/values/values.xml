@@ -695,6 +695,7 @@
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
     <string name="comida">COMIDA</string>
     <string name="contestaAlForo">Contesta al foro</string>
+    <string name="contestar">Contestar</string>
     <string name="edad">Edad</string>
     <string name="entrar">Entrar</string>
     <string name="error_field_required">This field is required</string>
@@ -705,11 +706,14 @@
     <string name="estudios">ESTUDIOS</string>
     <string name="foro">FORO</string>
     <string name="fraseEnviada">Frase envida</string>
+    <string name="grabarAudio">Grabar Audio</string>
     <string name="guardarPalabra">Guardar Palabra</string>
     <string name="hola">Hola</string>
     <string name="hotel">HOTEL</string>
     <string name="idioma">Ingles</string>
     <string name="mensajeApp">Viaja y aprende</string>
+    <string name="noApp">Sin aplicacion</string>
+    <string name="noMicrophone">Sin microfono</string>
     <string name="nombre">Nombre</string>
     <string name="nuevaFrase">Nueva Frase</string>
     <string name="palabra">Palabra</string>

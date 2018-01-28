@@ -17,13 +17,13 @@ import java.net.URL;
 
 public class RestClient {
     public final static String URL_SERVER = "http://158.227.55.34:28080/serverViajelp/";//EHU PUBLIC
-    //public final static String URL_SERVER = "http://192.168.0.14:8080/serverViajelp/";//EHU PUBLIC
+    //public final static String URL_SERVER = "http://192.168.0.14:8080/serverViajelp/";//CASA
     public final static String URLS_SERVER = "http://158.227.55.34:28080/static/serverViajelp/";
     public final String LOGIN_URL = URL_SERVER+"rest/appServ/loginPost";
     public final String REGISTRO_URL = URL_SERVER+"rest/appServ/registroPost";
     public final String LISTA_FRASES_URL = URL_SERVER+"rest/appServ/listaFrasesByTipo";
     public final static String UP_FRASE_ASK_URL = URL_SERVER+"rest/appServ/upFraseAsk";
-    public final String UP_FRASE_ANS_URL = URL_SERVER+"rest/appServ/upFraseAns";
+    public final static String UP_FRASE_ANS_URL = URL_SERVER+"rest/appServ/upFraseAns";
     public final String LISTA_PALABRAS_URL = URL_SERVER+"rest/appServ/listaPalabras";
     public final String UP_PALABRA_URL = URL_SERVER+"rest/appServ/upPalabra";
 
