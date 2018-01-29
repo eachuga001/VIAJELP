@@ -4,6 +4,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,11 +26,35 @@ public class Business {
 
     public Business (){
         //getFrasesSituaciones();
-        crearLista();
+        //crearLista();
         restClient = new RestClient();
         jsonTools = new JSONTools();
     }
 
+    public Boolean sendAudio(InputStream inputStream, String filename) throws IOException {
+
+        int httpResponseCode;
+
+        if (inputStream != null && filename != null && !filename.isEmpty()) {
+            httpResponseCode = restClient.postFile2(RestClient.UPLOAD_FILE_URL, inputStream, filename);
+            System.out.println("LA RESPUESTA ES: "+httpResponseCode);
+            if (httpResponseCode == HttpURLConnection.HTTP_OK || httpResponseCode == HttpURLConnection.HTTP_NO_CONTENT)
+                return Boolean.TRUE;
+        }
+
+        return Boolean.FALSE;
+    }
+
+    public Boolean sendAudio2(InputStream inputStream, String filename) throws IOException {
+
+        int httpResponseCode;
+        System.out.println("LA URI TIENE EL SIGUIENTE FILENAME: "+filename );
+        if (inputStream != null && filename != null && !filename.isEmpty()) {
+            System.out.println("LA URI TIENE EL SIGUIENTE FILENAME: "+filename );
+        }
+
+        return Boolean.FALSE;
+    }
 
     public void crearLista(){
         String[] frase1 = {"Hola","Hi"};

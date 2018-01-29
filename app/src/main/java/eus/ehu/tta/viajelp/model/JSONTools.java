@@ -34,6 +34,20 @@ public class JSONTools {
         return null;
     }
 
+    public JSONObject getJsonFromUsuario(Usuario u){
+        JSONObject json = new JSONObject();
+        try {
+            json.put("nombre",u.getNombre());
+            json.put("edad",u.getEdad());
+            json.put("password",u.getPassword());
+            json.put("usuario",u.getUsuario());
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        return json;
+    }
     //*********************************************************
     //****************OPERACIONES CON PALABRAS*****************
     //*********************************************************
@@ -167,7 +181,7 @@ public class JSONTools {
         JSONObject fraseJson = new JSONObject();
 
         try {
-            //fraseJson.put("idFrases",frase.getIdFrases());
+            fraseJson.put("idFrases",frase.getIdFrases());
             fraseJson.put("fraseEsp",frase.getFraseEsp());
             fraseJson.put("fraseEng",frase.getFraseEng());
             fraseJson.put("audio",frase.getAudio());

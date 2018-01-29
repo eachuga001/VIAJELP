@@ -4,7 +4,9 @@ import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.DataOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
@@ -19,6 +21,7 @@ public class RestClient {
     public final static String URL_SERVER = "http://158.227.55.34:28080/serverViajelp/";//EHU PUBLIC
     //public final static String URL_SERVER = "http://192.168.0.14:8080/serverViajelp/";//CASA
     public final static String URLS_SERVER = "http://158.227.55.34:28080/static/serverViajelp/";
+    public final static String UPLOAD_FILE_URL = "http://158.227.55.34:28080/serverViajelp/rest/appServ/uploadFile";
     public final String LOGIN_URL = URL_SERVER+"rest/appServ/loginPost";
     public final String REGISTRO_URL = URL_SERVER+"rest/appServ/registroPost";
     public final String LISTA_FRASES_URL = URL_SERVER+"rest/appServ/listaFrasesByTipo";
@@ -71,6 +74,88 @@ public class RestClient {
         System.out.println(conn.getResponseMessage());
 
         return conn.getResponseMessage();
+    }
+
+    public int postFile(String path, InputStream inputStream, String filename) throws IOException {
+        String boundary = Long.toString(System.currentTimeMillis());
+        String newLine = "\r\n";
+        String prefix = "--";
+        HttpURLConnection conn = null;
+
+        try {
+            conn = getConnection(path);
+            conn.setRequestMethod("POST");
+            conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
+            conn.setDoOutput(true);
+
+            DataOutputStream outputStream = new DataOutputStream(conn.getOutputStream());
+
+            outputStream.writeBytes(prefix + boundary + newLine);
+            outputStream.writeBytes("Content-Disposition: form-data; name=\"file\";filename=\"" + filename + "\"" + newLine);
+            outputStream.writeBytes(newLine);
+
+            byte[] data = new byte[1024 * 1024]; //Buffer intermedio para enviar el archivo
+            int len;
+
+            while ((len = inputStream.read(data)) > 0)
+                outputStream.write(data, 0, len);
+
+            outputStream.writeBytes(newLine);
+            outputStream.writeBytes(prefix + boundary + prefix + newLine);
+            outputStream.close();
+
+            return conn.getResponseCode();
+        } finally {
+            if (conn != null)
+                conn.disconnect();
+        }
+    }
+
+    public int postFile2(String path, InputStream is, String fileName) throws IOException{
+        String boundary = Long.toString(System.currentTimeMillis());
+        String newLine = "\r\n";
+        String prefix = "--";
+        String fileType;
+
+        if(fileName.contains("jpg")|| fileName.contains("png")||fileName.contains("gif")){
+            fileType="img";
+        }
+        else{
+            fileType="audio";
+        }
+
+        HttpURLConnection c = null;
+        try{
+            c = getConnection(path);
+            c.setRequestMethod("POST");
+            c.setRequestProperty("Content-Type", "multipart/form-data; boundary=" + boundary);
+            c.setDoOutput(true);
+            DataOutputStream out = new DataOutputStream(c.getOutputStream());
+            out.writeBytes(prefix+boundary+newLine);
+            out.writeBytes("Content-Disposition: form-data; name=\"filetype\"");
+            out.writeBytes(newLine);
+            out.writeBytes(newLine);
+            out.writeBytes(fileType);
+            out.writeBytes(newLine);
+            out.writeBytes(prefix+boundary+newLine);
+            out.writeBytes("Content-Disposition: form-data; name=\"file\"; filename=\"" + fileName + "\"" + newLine);
+            out.writeBytes("Content-Type: multipart/form-data" + newLine);
+            out.writeBytes(newLine);
+            byte[] data = new byte[1024 * 1024];
+            int len;
+            while((len = is.read(data)) > 0){
+                out.write(data,0,len);
+            }
+            out.writeBytes(newLine);
+            out.writeBytes(prefix+boundary+prefix+newLine);
+            out.close();
+            return c.getResponseCode();
+        }
+        finally{
+            if(c != null){
+                c.disconnect();
+            }
+        }
     }
 
 }

@@ -1,4 +1,4 @@
-#Sun Jan 28 19:03:50 CET 2018
+#Mon Jan 29 20:44:36 CET 2018
 base.0=/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_08726f9d6eef67f041e30faf9816fdfa13880625
 renamed.1=classes.dex
 renamed.0=classes2.dex

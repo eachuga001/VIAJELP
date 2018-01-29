@@ -11,10 +11,32 @@
         android:id="@+id/etRespuestaForo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btnGrabarAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/grabarAudio" />
+
+        <Button
+            android:id="@+id/btnReproducirAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/reproducir"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
     <Button
-        android:id="@+id/btnGrabarAudio"
-        android:layout_width="wrap_content"
+        android:id="@+id/btnEnviarAudio"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/grabarAudio" />
+        android:visibility="gone"
+        android:text="Enviar audio"/>
+
+
 
 </LinearLayout>

@@ -1,5 +1,6 @@
 package eus.ehu.tta.viajelp;
 
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -44,8 +45,9 @@ public class ForoActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 int idUser = getIntent().getIntExtra("idUsuario",0);
-                DialogPlayer dp =  DialogPlayer.newInstance(listaFrases.get(position),idUser,"dialogoResponder");
+                DialogPlayer dp =  DialogPlayer.newInstance(ForoActivity.this,listaFrases.get(position),idUser,position,"dialogoResponder");
                 dp.show(fragmentManager,"tag");
+
             }
         });
 

@@ -102,6 +102,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mProgressView = findViewById(R.id.login_progress);
     }
 
+    public void clickRegistro(View view){
+        Intent intent = new Intent(this,RegistroActivity.class);
+        startActivity(intent);
+    }
+
     private void populateAutoComplete() {
         if (!mayRequestContacts()) {
             return;
@@ -354,7 +359,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             showProgress(false);
 
             if (success) {
-                //Cuando otodo vaya bien en el login se lanza la nueva actividad
+                // Cuando todo vaya bien en el login se lanza la nueva actividad
                 Intent intent = new Intent(LoginActivity.this,MainActivity.class);
                 intent.putExtra("login",usuario.getUsuario());
                 intent.putExtra("password",usuario.getPassword());

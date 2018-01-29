@@ -3,8 +3,9 @@
 
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
-    <string name="action_sign_in">Sign in or register</string>
+    <string name="prompt_password">Password </string>
+    <string name="action_sign_in">Sign in </string>
+    <string name="registrarse">Registrarse</string>
     <string name="action_sign_in_short">Sign in</string>
     <string name="error_invalid_email">This email address is invalid</string>
     <string name="error_invalid_password">This password is too short</string>
@@ -24,6 +25,10 @@
     <string name="usuario">Usuario</string>
     <string name="password">Password</string>
     <string name="repetirPassword">Repetir Password</string>
+    <string name="passwordDebeCoicidir">Passwords deben coincidir</string>
+    <string name="usuarioRequerido">Usuario requerido</string>
+    <string name="passwordRequerido">Password requerido</string>
+    <string name="rellenaTodosLosCampos">Rellena todos los campos</string>
     <string name="queEmpieceElViaje">QUE EMPIECE EL VIAJE</string>
     <string name="hola">Hola</string>
     <string name="situaciones">SITUACIONES</string>
@@ -33,7 +38,8 @@
     <string name="preguntar">Preguntar</string>
     <string name="fraseEnviada">Frase envida</string>
     <string name="contestaAlForo">Contesta al foro</string>
-    <string name="contestar">Contestar</string>
+    <string name="usuarioYaexiste">Usuario ya existe</string>
+    <string name="responder">Enviar respuesta</string>
     <string name="grabarAudio">Grabar Audio</string>
     <string name="reproducir">Escuchar respuesta</string>
     <string name="cerrarSesion">Cerrar Sesion</string>
@@ -56,5 +62,6 @@
     <string name="play">Play</string>
     <string name="noMicrophone">Sin microfono</string>
     <string name="noApp">Sin aplicacion</string>
+    <string name="errorEnviando">Error en envio de frase</string>
 
 </resources>

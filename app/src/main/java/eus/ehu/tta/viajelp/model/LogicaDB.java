@@ -76,4 +76,24 @@ public class LogicaDB extends SQLiteOpenHelper {
 
         return usuario;
     }
+
+    public Usuario getUsuarioByUserName(String userName){
+        Usuario usuario = new Usuario();
+        db = getReadableDatabase();
+        Cursor c = db.rawQuery("SELECT * FROM Usuario WHERE usuario='"+userName+"'",null);
+        if(c.getCount() == 0)
+            System.out.println("Sin valoren en la tabla Tareas");
+        else{
+            while (c.moveToNext()){
+                usuario.setIdUsuario(c.getInt(0));
+                usuario.setNombre(c.getString(1));
+                usuario.setUsuario(c.getString(2));
+                usuario.setEdad(c.getInt(3));
+                usuario.setPassword(c.getString(4));
+            }
+
+        }
+
+        return usuario;
+    }
 }

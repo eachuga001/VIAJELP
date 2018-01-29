@@ -9,9 +9,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import eus.ehu.tta.viajelp.model.LogicaDB;
+import eus.ehu.tta.viajelp.model.Usuario;
 import eus.ehu.tta.viajelp.model.comms.ProgressTask;
 import eus.ehu.tta.viajelp.model.comms.RestClient;
 
@@ -19,12 +22,14 @@ public class MainActivity extends AppCompatActivity {
 
     Button btnSituaciones,btnAprendeme,btnForo;
     RestClient restClient;
+    LogicaDB logicaDB;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        logicaDB = new LogicaDB(this,"VIAJELPDB",null,1);
         restClient = new RestClient();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -42,7 +47,8 @@ public class MainActivity extends AppCompatActivity {
         btnAprendeme = (Button)findViewById(R.id.btnAprendeme);
         btnForo = (Button)findViewById(R.id.btnForo);
         TextView tvLogin = (TextView)findViewById(R.id.tvSaludoLogin);
-        tvLogin.setText(getIntent().getStringExtra("login"));
+        Usuario u = logicaDB.getUsuarioFromDB(getIntent().getIntExtra("idUsuario",0));
+        tvLogin.setText(R.string.hola + " "+u.getUsuario());
 
     }
 

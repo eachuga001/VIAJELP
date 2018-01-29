@@ -144,7 +144,7 @@ public class AdapterFraseListView extends BaseAdapter{
         TextView tvFraseEng = view.findViewById(R.id.tvFraseEngForo);
         TextView tvUsuarioAsk = view.findViewById(R.id.tvUsuarioAskForo);
         TextView tvUsuarioAns = view.findViewById(R.id.tvUsuarioAnsForo);
-        Button btnAudio = view.findViewById(R.id.btnReproducir);
+        //Button btnAudio = view.findViewById(R.id.btnReproducir);
 
         tvUsuarioAsk.setText(listaFrases.get(position).getAskUser());
         tvUsuarioAns.setText(listaFrases.get(position).getAnsUser());
@@ -156,20 +156,5 @@ public class AdapterFraseListView extends BaseAdapter{
         return view;
     }
 
-    public void checkAudio(final int position, Button btn){
 
-        if(listaFrases.get(position).getAudio()=="null"){
-            btn.setVisibility(View.GONE);
-        }else{
-            btn.setVisibility(View.VISIBLE);
-            btn.setOnClickListener(new View.OnClickListener(){
-                @Override
-                public void onClick(View v) {
-                    DialogPlayer dp = DialogPlayer.newInstance(position,"dialogoReproducir");
-                    dp.show(fragmentManager,"tag");
-                }
-            });
-        }
-
-    }
 }

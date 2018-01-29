@@ -6,36 +6,39 @@
     density="420dpi"
     format="10"
     plugin-version="2.3.3"
-    timestamp="1517163175701"
+    timestamp="1517257097559"
     token="-8611587460037460452"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="153" />
+        duration="1345" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="16" />
+        duration="433" />
     <task
         name="verifier"
-        duration="1" />
+        duration="35" />
 
     <artifact
-        location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+        location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
         type="SPLIT" />
 
     <build
         build-mode="FULL"
-        timestamp="1517159903987"
+        timestamp="1517250190055"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
+            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+        <artifact
+            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
@@ -62,35 +65,50 @@
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
-            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1517162613770"
+        timestamp="1517252797814"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1517255045080"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
             type="SPLIT" />
         <artifact
-            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
-            type="SPLIT" />
-        <artifact
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/outputs/apk/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1517163175701"
+        timestamp="1517255490376"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1517256803777"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1517257097559"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/home/edwin/AndroidStudioProjects/VIAJELP/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
     </build>
 
