@@ -10,9 +10,8 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import eus.ehu.tta.viajelp.model.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
-import eus.ehu.tta.viajelp.model.Palabra;
+import eus.ehu.tta.viajelp.model.beans.Palabra;
 import eus.ehu.tta.viajelp.presentation.AdapterFraseListView;
 
 public class PalabrasActivity extends AppCompatActivity {

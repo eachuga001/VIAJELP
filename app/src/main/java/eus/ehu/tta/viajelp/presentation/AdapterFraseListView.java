@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -14,10 +13,8 @@ import java.util.List;
 import android.support.v4.app.FragmentManager;
 
 import eus.ehu.tta.viajelp.R;
-import eus.ehu.tta.viajelp.model.Business;
-import eus.ehu.tta.viajelp.model.Frase;
-import eus.ehu.tta.viajelp.model.Palabra;
-import eus.ehu.tta.viajelp.presentation.view.DialogPlayer;
+import eus.ehu.tta.viajelp.model.beans.Frase;
+import eus.ehu.tta.viajelp.model.beans.Palabra;
 
 /**
  * Created by edwin on 3/01/18.

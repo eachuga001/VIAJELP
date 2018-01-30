@@ -1,4 +1,4 @@
-package eus.ehu.tta.viajelp.model;
+package eus.ehu.tta.viajelp.model.beans;
 
 /**
  * Created by edwin on 3/01/18.

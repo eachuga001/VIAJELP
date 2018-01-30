@@ -35,7 +35,7 @@ import java.util.List;
 
 import eus.ehu.tta.viajelp.model.Business;
 import eus.ehu.tta.viajelp.model.LogicaDB;
-import eus.ehu.tta.viajelp.model.Usuario;
+import eus.ehu.tta.viajelp.model.beans.Usuario;
 
 import static android.Manifest.permission.READ_CONTACTS;
 

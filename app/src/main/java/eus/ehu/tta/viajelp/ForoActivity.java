@@ -1,6 +1,5 @@
 package eus.ehu.tta.viajelp;
 
-import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +14,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import eus.ehu.tta.viajelp.model.Frase;
+import eus.ehu.tta.viajelp.model.beans.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.presentation.AdapterFraseListView;
 import eus.ehu.tta.viajelp.presentation.view.DialogPlayer;

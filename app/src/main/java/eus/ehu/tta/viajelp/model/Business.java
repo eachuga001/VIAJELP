@@ -9,6 +9,8 @@ import java.net.HttpURLConnection;
 import java.util.ArrayList;
 import java.util.List;
 
+import eus.ehu.tta.viajelp.model.beans.Frase;
+import eus.ehu.tta.viajelp.model.beans.Usuario;
 import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 /**
