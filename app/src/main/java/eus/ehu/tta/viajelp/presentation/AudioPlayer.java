@@ -1,4 +1,4 @@
-package eus.ehu.tta.viajelp.presentation.view;
+package eus.ehu.tta.viajelp.presentation;
 
 import android.media.AudioManager;
 import android.media.MediaPlayer;

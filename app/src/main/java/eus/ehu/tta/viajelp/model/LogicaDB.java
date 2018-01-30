@@ -21,16 +21,13 @@ public class LogicaDB extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-
         db.execSQL("CREATE TABLE IF NOT EXISTS Usuario (idUsuario INT, " +
                 "nombre VARCHAR, password VARCHAR, " +
                 "usuario VARCHAR, edad INT);");
-
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
         db.execSQL("DROP TABLE IF EXISTS Usuario");
     }
 
@@ -83,7 +80,9 @@ public class LogicaDB extends SQLiteOpenHelper {
         Usuario usuario = null;
         crearTablaUsuario();
         db = getReadableDatabase();
+
         Cursor c = db.rawQuery("SELECT * FROM Usuario",null);
+
         if(c.getCount() == 0)
             System.out.println("Sin valor en la tabla Usuario");
         else{

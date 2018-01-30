@@ -32,7 +32,9 @@ public class PalabrasActivity extends AppCompatActivity {
 
         buscador = (EditText)findViewById(R.id.etBuscadorPalabras);
         listView = (ListView) findViewById(R.id.lvPalabras);
+
         listView.setAdapter(new AdapterFraseListView(this,listaPalabras,"palabras"));
+
         //CODIGO PARA FILTRAR LAS PALABRAS EN EL LIST VIEW
         buscador.addTextChangedListener(new TextWatcher() {
             @Override

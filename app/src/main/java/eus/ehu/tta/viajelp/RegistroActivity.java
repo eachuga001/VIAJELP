@@ -14,7 +14,7 @@ import eus.ehu.tta.viajelp.model.Business;
 import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.model.LogicaDB;
 import eus.ehu.tta.viajelp.model.beans.Usuario;
-import eus.ehu.tta.viajelp.model.comms.ProgressTask;
+import eus.ehu.tta.viajelp.presentation.ProgressTask;
 import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 public class RegistroActivity extends AppCompatActivity {

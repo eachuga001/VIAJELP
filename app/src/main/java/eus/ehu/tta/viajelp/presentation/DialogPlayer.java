@@ -1,4 +1,4 @@
-package eus.ehu.tta.viajelp.presentation.view;
+package eus.ehu.tta.viajelp.presentation;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -25,7 +25,6 @@ import eus.ehu.tta.viajelp.model.Business;
 import eus.ehu.tta.viajelp.model.beans.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.model.comms.BackgroundThread;
-import eus.ehu.tta.viajelp.model.comms.ProgressTask;
 import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 /**
@@ -68,6 +67,7 @@ public class DialogPlayer extends DialogFragment implements Runnable {
 
     @Override
     public Dialog onCreateDialog(Bundle savedInstanceState){
+
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         //etNuevaFrase = getActivity().findViewById(R.id.etPreguntaForo);
@@ -85,7 +85,6 @@ public class DialogPlayer extends DialogFragment implements Runnable {
         }
 
         return builder.create();
-
     }
 
     public AlertDialog.Builder getDialogPreguntar(AlertDialog.Builder builder){
@@ -103,7 +102,6 @@ public class DialogPlayer extends DialogFragment implements Runnable {
                         String fraseJson = jsonTools.getJsonFromFrase(jsonTools.buildFraseAsk(etNuevaFrase.getText().toString(),idUsuario));
 
                         BackgroundThread hilo = new BackgroundThread(fraseJson);
-
                         hilo.execute(RestClient.UP_FRASE_ASK_URL);
                         //hilo.execute("http://192.168.43.203:8080/TFG/rest");
 

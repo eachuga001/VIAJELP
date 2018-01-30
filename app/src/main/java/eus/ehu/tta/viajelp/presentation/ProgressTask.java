@@ -1,4 +1,4 @@
-package eus.ehu.tta.viajelp.model.comms;
+package eus.ehu.tta.viajelp.presentation;
 
 
 import android.content.Context;

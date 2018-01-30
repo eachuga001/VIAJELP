@@ -78,14 +78,7 @@ public class AdapterFraseListView extends BaseAdapter{
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
-        /*if(convertView == null)
-            view = layoutInflater.inflate(R.layout.activity_situation_item_list,null);
 
-        TextView tvFraseEsp = view.findViewById(R.id.tvFraseEsp);
-        TextView tvFraseEng = view.findViewById(R.id.tvFraseEng);
-
-        tvFraseEsp.setText(listaFrases.get(position).getFraseEsp());
-        tvFraseEng.setText(listaFrases.get(position).getFraseEng());*/
         switch (type){
             case "situaciones":
                 view = workForSituations(position,view);
@@ -108,7 +101,6 @@ public class AdapterFraseListView extends BaseAdapter{
 
         TextView tvPalabraEsp = view.findViewById(R.id.tvPalabraEsp);
         TextView tvPalabraEng = view.findViewById(R.id.tvPalabraEng);
-
 
         tvPalabraEsp.setText(listaPalabras.get(position).getPalabraEsp());
         tvPalabraEng.setText(listaPalabras.get(position).getPalabraEng());

@@ -17,7 +17,7 @@ import java.util.List;
 import eus.ehu.tta.viajelp.model.beans.Frase;
 import eus.ehu.tta.viajelp.model.JSONTools;
 import eus.ehu.tta.viajelp.presentation.AdapterFraseListView;
-import eus.ehu.tta.viajelp.presentation.view.DialogPlayer;
+import eus.ehu.tta.viajelp.presentation.DialogPlayer;
 
 public class ForoActivity extends AppCompatActivity {
 
@@ -34,6 +34,7 @@ public class ForoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_foro);
 
         fragmentManager = getSupportFragmentManager();
+
         jsonTools = new JSONTools();
 
         listView = (ListView) findViewById(R.id.lvFrasesForo);
@@ -87,6 +88,7 @@ public class ForoActivity extends AppCompatActivity {
                 /*Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();*/
                 //Para crear un dialogo se le pasa el id del usuario y el tipo de dialogo mediante un string
+
                 DialogPlayer dp = DialogPlayer.newInstance(getIntent().getIntExtra("idUsuario",0),"dialogoPreguntar");
                 dp.show(fragmentManager,"Tag");
             }
