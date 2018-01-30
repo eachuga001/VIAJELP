@@ -1,6 +1,7 @@
 package eus.ehu.tta.viajelp;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import org.json.JSONObject;
 
+import java.util.Locale;
+
 import eus.ehu.tta.viajelp.model.LogicaDB;
 import eus.ehu.tta.viajelp.model.Usuario;
 import eus.ehu.tta.viajelp.model.comms.ProgressTask;
@@ -20,7 +23,7 @@ import eus.ehu.tta.viajelp.model.comms.RestClient;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button btnSituaciones,btnAprendeme,btnForo;
+    Button btnSituaciones,btnAprendeme,btnForo,btnIdioma;
     RestClient restClient;
     LogicaDB logicaDB;
 
@@ -38,17 +41,22 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                 //       .setAction("Action", null).show();
+                logicaDB.borrarTablaUsuario();
+                Toast.makeText(getApplicationContext(),R.string.sesionCerrada,Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(intent);
             }
         });
 
+        //btnIdioma = (Button)findViewById(R.id.btnIdioma);
         btnSituaciones = (Button)findViewById(R.id.btnSituaciones);
         btnAprendeme = (Button)findViewById(R.id.btnAprendeme);
         btnForo = (Button)findViewById(R.id.btnForo);
         TextView tvLogin = (TextView)findViewById(R.id.tvSaludoLogin);
         Usuario u = logicaDB.getUsuarioFromDB(getIntent().getIntExtra("idUsuario",0));
-        tvLogin.setText(R.string.hola + " "+u.getUsuario());
+        tvLogin.setText(getString(R.string.hola) + " "+u.getUsuario());
 
     }
 
@@ -75,6 +83,15 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("frasesForo",strigFrasesForo);
         intent.putExtra("idUsuario",idUsuario);
         startActivity(intent);
+    }
+
+    public void clickIdioma(View view){
+        Locale localizacion = new Locale("en", "EN");
+
+        Locale.setDefault(localizacion);
+        Configuration config = new Configuration();
+        config.locale = localizacion;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
     }
 
     public void pedirFrases(){

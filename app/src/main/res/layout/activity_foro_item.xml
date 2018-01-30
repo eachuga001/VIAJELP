@@ -19,20 +19,25 @@
                 android:id="@+id/tvUsuarioAskForo"
                 android:layout_gravity="start"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"/>
 
             <TextView
                 android:id="@+id/tvUsuarioAnsForo"
                 android:layout_gravity="end"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textStyle="bold"/>
 
         </GridLayout>
 
         <TextView
             android:id="@+id/tvFraseEspForo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:textStyle="bold|italic"/>
         <TextView
             android:id="@+id/tvFraseEngForo"
             android:layout_width="match_parent"

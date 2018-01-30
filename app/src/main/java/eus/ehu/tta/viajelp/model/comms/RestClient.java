@@ -76,40 +76,6 @@ public class RestClient {
         return conn.getResponseMessage();
     }
 
-    public int postFile(String path, InputStream inputStream, String filename) throws IOException {
-        String boundary = Long.toString(System.currentTimeMillis());
-        String newLine = "\r\n";
-        String prefix = "--";
-        HttpURLConnection conn = null;
-
-        try {
-            conn = getConnection(path);
-            conn.setRequestMethod("POST");
-            conn.setRequestProperty("Content-Type", "multipart/form-data;boundary=" + boundary);
-            conn.setDoOutput(true);
-
-            DataOutputStream outputStream = new DataOutputStream(conn.getOutputStream());
-
-            outputStream.writeBytes(prefix + boundary + newLine);
-            outputStream.writeBytes("Content-Disposition: form-data; name=\"file\";filename=\"" + filename + "\"" + newLine);
-            outputStream.writeBytes(newLine);
-
-            byte[] data = new byte[1024 * 1024]; //Buffer intermedio para enviar el archivo
-            int len;
-
-            while ((len = inputStream.read(data)) > 0)
-                outputStream.write(data, 0, len);
-
-            outputStream.writeBytes(newLine);
-            outputStream.writeBytes(prefix + boundary + prefix + newLine);
-            outputStream.close();
-
-            return conn.getResponseCode();
-        } finally {
-            if (conn != null)
-                conn.disconnect();
-        }
-    }
 
     public int postFile2(String path, InputStream is, String fileName) throws IOException{
         String boundary = Long.toString(System.currentTimeMillis());

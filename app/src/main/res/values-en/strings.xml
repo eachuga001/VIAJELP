@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VIAJELP</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password </string>
+    <string name="action_sign_in">Sign in </string>
+    <string name="registrarse">Registrarse</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_main">Home</string>
+    <string name="entrar">LogIn</string>
+    <string name="registrate">Registering</string>
+    <string name="idioma">English</string>
+    <string name="mensajeApp">Travel and learn</string>
+    <string name="registro">Register</string>
+    <string name="nombre">Name</string>
+    <string name="edad">Age</string>
+    <string name="usuario">User</string>
+    <string name="password">Password</string>
+    <string name="sesionCerrada">Session closed</string>
+    <string name="repetirPassword">Repeat Password</string>
+    <string name="passwordDebeCoicidir">Passwords must be the same</string>
+    <string name="usuarioRequerido">User required</string>
+    <string name="passwordRequerido">Password required</string>
+    <string name="rellenaTodosLosCampos">Write all fields</string>
+    <string name="queEmpieceElViaje">START THE TRAVEL</string>
+    <string name="hola">HI</string>
+    <string name="situaciones">SITUTIONS</string>
+    <string name="aprendeme">LEARN ME</string>
+    <string name="foro">FORUM</string>
+    <string name="pregutaAlForo">Write to forum</string>
+    <string name="preguntar">Ask</string>
+    <string name="fraseEnviada">Sent phrase</string>
+    <string name="contestaAlForo">Ask to forum</string>
+    <string name="usuarioYaexiste">User already exist</string>
+    <string name="responder">Send response</string>
+    <string name="grabarAudio">Rec audio</string>
+    <string name="reproducir">Listen answer</string>
+    <string name="cerrarSesion">Close session</string>
+    <string name="aeropuerto">AIRPORT</string>
+    <string name="hotel">HOTEL</string>
+    <string name="bar">BAR</string>
+    <string name="comida">FOOD</string>
+    <string name="salud">HEALTH</string>
+    <string name="ubicacion">UBICATION</string>
+    <string name="transporte">PUBLIC TRANSPORT</string>
+    <string name="estudios">STUDIES</string>
+    <string name="agregarPalabra">Add word</string>
+    <string name="escribePalabra">Write word</string>
+    <string name="guardarPalabra">Save word</string>
+    <string name="palabras">WORDS</string>
+    <string name="palabra">Word</string>
+    <string name="traduccion">Traduction</string>
+    <string name="nuevaFrase">New phrase</string>
+    <string name="verLista">Show list</string>
+    <string name="play">Play</string>
+    <string name="noMicrophone">No microphone</string>
+    <string name="noApp">No application</string>
+    <string name="errorEnviando">Error sending phrase</string>
+</resources>

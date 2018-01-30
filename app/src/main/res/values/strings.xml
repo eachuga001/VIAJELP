@@ -24,6 +24,7 @@
     <string name="edad">Edad</string>
     <string name="usuario">Usuario</string>
     <string name="password">Password</string>
+    <string name="sesionCerrada">Sesion cerrada</string>
     <string name="repetirPassword">Repetir Password</string>
     <string name="passwordDebeCoicidir">Passwords deben coincidir</string>
     <string name="usuarioRequerido">Usuario requerido</string>

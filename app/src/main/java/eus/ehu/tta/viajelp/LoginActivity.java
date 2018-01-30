@@ -75,6 +75,18 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         setContentView(R.layout.activity_login);
         // Set up the login form.
         logicaDB = new LogicaDB(this,"VIAJELPDB",null,1);
+        Usuario usuario = logicaDB.getUsuario();
+        //Para que la aplicacion inicie
+        if(usuario!=null){
+            Intent intent =  new Intent(this,MainActivity.class);
+            intent.putExtra("login",usuario.getUsuario());
+            intent.putExtra("password",usuario.getPassword());
+            intent.putExtra("idUsuario",usuario.getIdUsuario());
+            startActivity(intent);
+            finish();
+        }
+
+
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
 
